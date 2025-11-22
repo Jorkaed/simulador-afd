@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simulador AFD</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+
+</head>
+
+<body class="bg-light">
+
+  <div class="container-fluid p-3">
+    <div class="row">
+
+      <!-- ========================================================= -->
+      <!-- TABLA -->
+      <!-- ========================================================= -->
+      <div class="col-3">
+        <div class="card shadow-sm">
+          <div class="card-header text-center fw-bold">ESTADOS / TRANSICIONES</div>
+          <div class="card-body p-2" style="height: 80vh; overflow-y: auto;">
+            <table class="table table-bordered table-sm text-center">
+              <thead class="table-secondary" id="thead-trans"></thead>
+              <tbody id="tbody-trans"></tbody>
+            </table>
+            <button id="btn-del-all-trans" class="btn btn-danger w-100 btn-sm mt-2 mb-2">
+              Eliminar todas las transiciones
+            </button>
+            <div id="resultado" class="alert text-center d-none mt-2">Resultado...</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================================= -->
+      <!-- PANEL CENTRAL -->
+      <!-- ========================================================= -->
+      <div class="col-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+
+            <!-- Tipo -->
+            <div class="mb-3">
+              <label class="fw-bold">Tipo de Autómata</label><br>
+              <span class="badge bg-primary">AFD</span>
+            </div>
+
+            <!-- Símbolos -->
+            <div class="mb-3">
+              <label class="fw-bold">1) Símbolos del alfabeto</label>
+              <div class="input-group input-group-sm mb-2">
+                <input id="input-simbolo" class="form-control" placeholder="Símbolo">
+                <button class="btn btn-primary">Añadir</button>
+                <button id="btn-del-simbolo" class="btn btn-secondary">Eliminar</button>
+              </div>
+            </div>
+
+            <!-- Estados -->
+            <div class="mb-3">
+              <label class="fw-bold">2) Conjunto de estados</label>
+              <div class="input-group input-group-sm mb-2">
+                <input id="input-estado" class="form-control" placeholder="q0">
+                <button class="btn btn-primary">Añadir</button>
+                <button id="btn-del-estado" class="btn btn-secondary">Eliminar</button>
+              </div>
+            </div>
+
+            <!-- Transiciones -->
+            <div class="mb-3">
+              <label class="fw-bold">3) Definir transiciones</label>
+
+              <div class="row g-1">
+                <div class="col-4">
+                  <select id="origen" class="form-select form-select-sm"></select>
+                </div>
+                <div class="col-4">
+                  <select id="simbolo" class="form-select form-select-sm"></select>
+                </div>
+                <div class="col-4">
+                  <select id="destino" class="form-select form-select-sm"></select>
+                </div>
+              </div>
+
+              <button id="btn-add-trans" class="btn btn-primary btn-sm mt-2 w-100">
+                Agregar transición
+              </button>
+            </div>
+
+            <!-- Inicial -->
+            <div class="mb-3">
+              <label class="fw-bold">4) Estado inicial</label>
+              <select id="estado-inicial" class="form-select form-select-sm"></select>
+            </div>
+
+            <!-- Finales -->
+            <div class="mb-3">
+              <label class="fw-bold">5) Estados finales</label>
+              <select id="estados-finales" class="form-select form-select-sm" multiple></select>
+            </div>
+
+            <!-- Simulación -->
+            <div class="input-group mb-3">
+              <input id="cadena" type="text" class="form-control" placeholder="Cadena a reconocer">
+              <button id="btn-simular" class="btn btn-success">SIMULAR</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================================= -->
+      <!-- Gráfico -->
+      <!-- ========================================================= -->
+      <div class="col-5">
+        <div class="card shadow-sm">
+          <div class="card-header text-center fw-bold">
+            Representación del Autómata
+          </div>
+          <div class="card-body p-0">
+            <div id="cy"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- SCRIPTS -->
+  <!-- ========================================================= -->
+
+  <!-- CYTOSCAPE -->
+  <script src=".assets/js/cytoscape.min.js"></script>
+  
+  <!-- AFD -->
+  <script src="./assets/js/afd.js"></script>
+
+  <!-- UI -->
+  <script src="./assets/js/ui.js"></script>
+
+  <!-- Draw -->
+  <script src="./assets/js/draw.js"></script>
+
+</body>
+</html>

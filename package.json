@@ -1,0 +1,35 @@
+{
+  "name": "simulador-afd",
+  "version": "1.0.0",
+  "description": "Simulador de Autómata Finito Determinista (AFD) con Electron.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "dist": "electron-builder --dir",
+    "package": "electron-builder"
+  },
+  "author": "Stevenson Arias and Johander Sarmiento",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.6.0",
+    "electron-reload": "^1.5.0"
+  },
+  "build": {
+    "appId": "com.tuempresa.simulador-afd",
+    "files": [
+      "src/**/*",
+      "main.js",
+      "preload.js",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "cytoscape": "^3.33.1"
+  }
+}
