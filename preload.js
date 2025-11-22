@@ -3,6 +3,9 @@
 // ================================
 const { contextBridge, ipcRenderer } = require("electron");
 
+// ELIMINAR ESTO: const cytoscape = require("cytoscape");
+// ELIMINAR ESTO: contextBridge.exposeInMainWorld("cytoscapeLib", cytoscape);
+
 // Exponer métodos permitidos para comunicación
 contextBridge.exposeInMainWorld("electronAPI", {
     invoke: (channel, ...args) => {

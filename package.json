@@ -27,5 +27,9 @@
     "directories": {
       "buildResources": "assets"
     }
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "cytoscape": "^3.33.1"
   }
 }

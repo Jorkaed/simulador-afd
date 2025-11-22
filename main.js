@@ -35,7 +35,7 @@ app.whenReady().then(() => {
   // En Mac, el icono de la ventana no cambia el icono del Dock (el cohete).
   // Debes forzarlo explícitamente aquí:
   if (process.platform === 'darwin') {
-    app.dock.setIcon(path.join(__dirname, 'src', 'assets', 'img', 'logo.png')); 
+    app.dock.setIcon(path.join(__dirname, 'src', 'assets', 'img', 'logo.png')); // <--- NUEVO
   }
 
   createWindow();
