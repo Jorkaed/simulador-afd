@@ -46,7 +46,7 @@ function initGraph() {
             {
                 selector: "node.current",
                 style: {
-                    "background-color": "#ffeb3b" // Amarillo
+                    "background-color": "#ffeb3b"
                 }
             },
             

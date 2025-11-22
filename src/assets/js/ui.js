@@ -5,30 +5,23 @@ const afd = new AFD();
 const inputEstado = document.getElementById("input-estado");
 const btnAddEstado = document.getElementById("btn-add-estado") || document.querySelector("#input-estado + button");
 const btnDelEstado = document.getElementById("btn-del-estado");
-
 const inputSimbolo = document.getElementById("input-simbolo");
 const btnAddSimbolo = document.getElementById("btn-add-simbolo") || document.querySelector("#input-simbolo + button");
 const btnDelSimbolo = document.getElementById("btn-del-simbolo");
-
 const selectOrigen = document.getElementById("origen");
 const selectSimbolo = document.getElementById("simbolo");
 const selectDestino = document.getElementById("destino");
 const btnAddTrans = document.getElementById("btn-add-trans");
-
-// ✅ NUEVA REFERENCIA: Botón eliminar transiciones
 const btnDelAllTrans = document.getElementById("btn-del-all-trans");
-
 const tableHead = document.getElementById("thead-trans");
 const tableBody = document.getElementById("tbody-trans");
-
 const selectInicial = document.getElementById("estado-inicial");
 const selectFinales = document.getElementById("estados-finales");
-
 const inputCadena = document.getElementById("cadena");
 const btnSimular = document.getElementById("btn-simular");
 const divResultado = document.getElementById("resultado");
 
-// Función para refrescar el grafo (si draw.js está cargado)
+// Función para refrescar el grafo
 function dibujarSiEsPosible() {
   if (typeof refrescarGrafo === "function") {
     try { refrescarGrafo(); } catch (e) { console.error(e); }
@@ -113,7 +106,7 @@ function actualizarTabla() {
       const dest = afd.transiciones[estado][sim];
       td.textContent = dest ? dest : "-";
       
-      // Permitir clic en celda para definir transición rápidamente (Opcional)
+      // Permitir clic en celda para definir transición rápidamente
       td.style.cursor = "pointer";
       td.onclick = () => {
           selectOrigen.value = estado;
@@ -183,7 +176,7 @@ if (btnAddTrans) {
   });
 }
 
-// ✅ NUEVO LISTENER: Eliminar todas las transiciones
+// Eliminar todas las transiciones
 if (btnDelAllTrans) {
   btnDelAllTrans.addEventListener("click", () => {
     // Confirmación simple para evitar accidentes
