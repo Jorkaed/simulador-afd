@@ -9,6 +9,8 @@ Permite crear estados, definir alfabetos, establecer transiciones y ejecutar cad
 
 ![Vista previa del simulador AFD](src/assets/img/captura.png)
 
+---
+
 ## ✨ Características Principales
 
 * **Diseño Intuitivo de Autómatas**
