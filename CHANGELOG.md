@@ -34,7 +34,7 @@ El formato sigue las recomendaciones de **Keep a Changelog** y el versionado sig
 
 ---
 
-## [0.2.0] - 2025-11-20
+## [0.2.0] - 2025-10-31
 
 ### ✨ Mejoras
 
@@ -49,7 +49,7 @@ El formato sigue las recomendaciones de **Keep a Changelog** y el versionado sig
 
 ---
 
-## [0.1.0] - 2025-11-18
+## [0.1.0] - 2025-10-18
 
 ### 🧪 Prototipo inicial
 
