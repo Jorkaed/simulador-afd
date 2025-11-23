@@ -3,29 +3,57 @@
   "version": "1.0.0",
   "description": "Simulador de Autómata Finito Determinista (AFD) con Electron.",
   "main": "main.js",
+  "author": "Stevenson Arias and Johander Sarmiento",
+  "license": "MIT",
   "scripts": {
     "start": "electron .",
     "dev": "electron .",
-    "dist": "electron-builder --dir",
-    "package": "electron-builder"
+    "//COMENTARIO": "Scripts de construcción:",
+    "dist": "electron-builder",
+    "dist:win": "electron-builder --win nsis",
+    "dist:mac": "electron-builder --mac dmg",
+    "dist:linux": "electron-builder --linux AppImage"
   },
-  "author": "Stevenson Arias and Johander Sarmiento",
-  "license": "MIT",
   "devDependencies": {
     "electron": "^31.0.0",
     "electron-builder": "^24.6.0",
     "electron-reload": "^1.5.0"
   },
+  "//COMENTARIO": "Configuración de electron-builder:",
   "build": {
-    "appId": "com.tuempresa.simulador-afd",
+    "appId": "com.simulador.afd",
+    "productName": "Simulador AFD",
+    "copyright": "Copyright © 2025 Stevenson Arias & Johander Sarmiento",
+    "directories": {
+      "buildResources": "build"
+    },
     "files": [
       "src/**/*",
       "main.js",
       "preload.js",
-      "package.json"
+      "package.json",
+      "LICENSE"
     ],
-    "directories": {
-      "buildResources": "assets"
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Simulador AFD"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "build/icon.icns",
+      "category": "public.app-category.education"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "build/icon.png",
+      "category": "Education"
     }
   }
 }
