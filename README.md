@@ -7,9 +7,7 @@ Permite crear estados, definir alfabetos, establecer transiciones y ejecutar cad
 
 ## 📸 Captura del Proyecto
 
-```md
 ![Vista previa del simulador AFD](src/assets/img/captura.png)
-```
 
 ## ✨ Características Principales
 
