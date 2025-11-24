@@ -189,7 +189,7 @@ Este módulo define el estado inicial ($q_0$) y el conjunto de estados de acepta
     * *Uso de Teclado:* Mantenga presionada la tecla `Ctrl` (Windows/Linux) o `Cmd` (macOS) para seleccionar múltiples estados.
 3.  En el grafo, los nodos seleccionados se actualizarán visualmente con un borde doble.
 
-    ![Selección Estado Inicial-Final](src/assets/img/inicial_final.png.png)
+    ![Selección Estado Inicial-Final](src/assets/img/inicial_final.png)
 
 > `[Figura 4.4: Configuración de estado inicial y estados finales en el panel central con su reflejo visual en el grafo]`
 
@@ -236,4 +236,3 @@ La siguiente tabla resume los problemas operativos comunes y sus soluciones.
 | **E4** | La visualización del grafo es confusa debido al cruce excesivo de aristas. | Complejidad del autómata o disposición automática subóptima. | Los nodos del grafo son interactivos. Arrastre y suelte los nodos manualmente para reorganizar la visualización según sea necesario. |
 
 ---
-**Fin del Documento**
