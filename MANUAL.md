@@ -73,7 +73,7 @@ El área de trabajo se presenta en una sola ventana dividida verticalmente en tr
 
     ![Vista previa del simulador AFD](src/assets/img/simulador.png)  
 
-> `[Figura 2.1: Vista general de la interfaz gráfica del Simulador AFD con sus áreas principales identificadas]` 
+> `[Figura 1: Vista general de la interfaz gráfica del Simulador AFD con sus áreas principales identificadas]` 
 
 ---
 
@@ -136,7 +136,7 @@ El alfabeto define el conjunto finito de símbolos de entrada permitidos.
 
     ![Agg Símbolo](src/assets/img/agg_simbolo.png)
 
-> `[Figura 4.1: Sección del panel central mostrando la adición de símbolos al alfabeto]`
+> `[Figura 2: Sección del panel central mostrando la adición de símbolos al alfabeto]`
 
 4.  Para eliminar un símbolo, escriba el Símbolo y haga clic en el botón **[Eliminar]**.
     > **Nota:** El sistema solo acepta símbolos de longitud 1.
@@ -152,7 +152,7 @@ Define el conjunto finito de estados del autómata.
 
     ![Agg Estado](src/assets/img/agg_estado.png)
 
-> `[Figura 4.2: Creación de estados 'q0' y 'q1' en el panel central y su aparición en el grafo del panel derecho]`
+> `[Figura 3: Creación de estados 'q0' y 'q1' en el panel central y su aparición en el grafo del panel derecho]`
 
 5.  Para eliminar un estado, escriba el identificador y haga clic en el botón **[Eliminar]**.
     > **Advertencia:** La eliminación de un estado conlleva la eliminación automática de todas las transiciones entrantes y salientes asociadas a dicho estado.
@@ -173,7 +173,7 @@ Define la función de transición $\delta: Q \times \Sigma \to Q$.
 
     ![Agg Transiciones](src/assets/img/trans.png)
 
-> `[Figura 4.3: Proceso de creación de una transición y su actualización en el grafo y la tabla izquierda]`
+> `[Figura 4: Proceso de creación de una transición y su actualización en el grafo y la tabla izquierda]`
 
 ### 4.5 Configuración del Autómata
 Este módulo define el estado inicial ($q_0$) y el conjunto de estados de aceptación ($F$).
@@ -191,7 +191,7 @@ Este módulo define el estado inicial ($q_0$) y el conjunto de estados de acepta
 
     ![Selección Estado Inicial-Final](src/assets/img/inicial_final.png)
 
-> `[Figura 4.4: Configuración de estado inicial y estados finales en el panel central con su reflejo visual en el grafo]`
+> `[Figura 5: Configuración de estado inicial y estados finales en el panel central con su reflejo visual en el grafo]`
 
 ### 4.6 Simulación de Cadenas
 Este módulo permite verificar la aceptación o rechazo de una cadena de entrada específica por el autómata definido.
@@ -205,7 +205,7 @@ Este módulo permite verificar la aceptación o rechazo de una cadena de entrada
 
     ![Simular](src/assets/img/simulacion.png)
 
-> `[Figura 4.5: Área de simulación en el panel central mostrando una cadena de entrada]`
+> `[Figura 6: Área de simulación en el panel central mostrando una cadena de entrada]`
 
 **Interpretación de Resultados:**
 * **Animación Visual:** El sistema ejecutará una animación paso a paso en el grafo del **Panel Derecho**. El estado activo se resaltará en amarillo.
@@ -213,7 +213,7 @@ Este módulo permite verificar la aceptación o rechazo de una cadena de entrada
 
     ![Cadena Aceptada-Rechazada](src/assets/img/Cadena.png)
 
-> `[Figura 4.6: Ejemplo de resultado de simulación exitosa (Cadena Aceptada) y fallida (Cadena Rechazada)]`
+> `[Figura 7: Ejemplo de resultado de simulación exitosa (Cadena Aceptada) y fallida (Cadena Rechazada)]`
 
 ### 4.7 Herramientas de Reinicio
 El sistema proporciona una función para reestablecer rápidamente la lógica del autómata.
