@@ -32,7 +32,10 @@
       "main.js",
       "preload.js",
       "package.json",
-      "LICENSE"
+      "LICENSE",
+      "CHANGELOG.md",  
+      "MANUAL.md",     
+      "MANUAL.pdf"   
     ],
     "win": {
       "target": "nsis",
