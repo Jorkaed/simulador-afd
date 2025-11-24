@@ -130,8 +130,9 @@ npm run dist:linux
 
 ## 👥 Autores
 
-* **Stevenson Arias** (https://github.com/Jorkaed)
-* **Johander Sarmiento**
+* **Stevenson Jorkaed Arias Sanabria** (https://github.com/Jorkaed)
+* **Johander José Sarmiento Ramirez** (https://github.com/JohanSarram)
+* **Jose Gerardo Chacon Rangel**
 
 ---
 
